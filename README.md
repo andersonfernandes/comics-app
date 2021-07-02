@@ -1,24 +1,25 @@
-# README
+# Comics App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Using the [Marvel API](https://developer.marvel.com/) displays all comics released by Marvel and also allows the user to mark specific comics as favorite.
 
-Things you may want to cover:
+## Running the development environment
 
-* Ruby version
+### Using Docker
 
-* System dependencies
+Run:  `docker-compose up --build`
 
-* Configuration
+### Without Docker
 
-* Database creation
+You need to have the version 2.7.3 of ruby, bundler, node 14.x and yarn installed
 
-* Database initialization
+Run the following steps:
 
-* How to run the test suite
+```shell
+bundle install
+yarn install
+bundle exec rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
-
-* ...
+The application will be running at: http://localhost:3000
