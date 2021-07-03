@@ -6,7 +6,9 @@ Using the [Marvel API](https://developer.marvel.com/) displays all comics releas
 
 ### Using Docker
 
-Run:  `docker-compose up --build`
+Create the env file with `cp env .env`, and replace the public and private keys values
+
+Run: `docker-compose up --build`
 
 ### Without Docker
 

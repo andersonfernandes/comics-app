@@ -4,6 +4,8 @@ services:
   web:
     build:
       context: .
+    env_file:
+      - .env
     entrypoint: ./entrypoint.sh
     ports:
       - "3000:3000"
