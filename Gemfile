@@ -13,6 +13,7 @@ gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'pry', '~> 0.14.1'
+  gem 'rubocop', '~> 1.18', require: false
 end
 
 group :development do
