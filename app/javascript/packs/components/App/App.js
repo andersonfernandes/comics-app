@@ -1,7 +1,14 @@
 import React from 'react'
 
+import GlobalStyle from '../GlobalStyle'
+import Header from '../Header'
+
 const App = () => (
-  <h1>Comics App</h1>
+  <>
+    <GlobalStyle />
+
+    <Header />
+  </>
 )
 
 export default App
