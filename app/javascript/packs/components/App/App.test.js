@@ -4,21 +4,21 @@ import { act } from "react-dom/test-utils"
 
 import App from "./App"
 
-let container = null;
+let container = null
 beforeEach(() => {
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
+  container = document.createElement("div")
+  document.body.appendChild(container)
+})
 
 afterEach(() => {
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
+  unmountComponentAtNode(container)
+  container.remove()
+  container = null
 });
 
 it("renders the app greeting", () => {
   act(() => {
-    render(<App />, container);
+    render(<App />, container)
   });
-  expect(container.textContent).toBe("Comics App");
+  expect(container.textContent).toBe("Comics App")
 });

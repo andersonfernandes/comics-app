@@ -11,6 +11,7 @@ const Root = styled.header`
   position: fixed;
   top: 0;
   padding-top: 20px;
+  z-index: 1000;
 `
 
 const Logo = styled.img`

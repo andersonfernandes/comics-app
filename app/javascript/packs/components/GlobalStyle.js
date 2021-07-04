@@ -19,6 +19,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     background-color: #202020;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle
