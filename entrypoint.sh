@@ -1,6 +1,8 @@
 #! /bin/bash
 set -e
 
+rm -f /app/tmp/pids/server.pid
+
 bundle install
 yarn install
 
