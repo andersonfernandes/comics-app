@@ -15,8 +15,8 @@ describe ComicsList do
             'title' => 'Comic 1',
             'issueNumber' => 12,
             'thumbnail' => {
-              "path" => "http://example/image_00",
-              "extension" => "jpg"
+              'path' => 'http://example/image_00',
+              'extension' => 'jpg'
             }
           },
           {
@@ -24,10 +24,10 @@ describe ComicsList do
             'title' => 'Comic 2',
             'issueNumber' => 13,
             'thumbnail' => {
-              "path" => "http://example/image_01",
-              "extension" => "jpg"
+              'path' => 'http://example/image_01',
+              'extension' => 'jpg'
             }
-          },
+          }
         ]
       }
     end
@@ -38,9 +38,7 @@ describe ComicsList do
         .with(kind_of(Hash)).and_return(comics_response)
     end
 
-    it do
-      expect(subject.fetch).to be_a(Hash)
-    end
+    it { expect(subject.fetch).to be_a(Hash) }
 
     it do
       custom_params = { offset: 12 }
