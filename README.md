@@ -22,6 +22,16 @@ yarn install
 bundle exec rails server
 ```
 
----
-
 The application will be running at: http://localhost:3000
+
+## Dependencies
+
+- The gem Faraday was used on the backend to communicate with the Marvel API
+- React was the frontend framework chosen to implement the interfaces
+
+## Future Work
+
+- Backend to upvote comics
+- Frontend to paginate the comics list
+- Implement frontend tests using Jest
+- Increase tests coverage of the backend
