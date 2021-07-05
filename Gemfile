@@ -8,7 +8,7 @@ gem 'faraday', '~> 0.9.2'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4'
 gem 'sass-rails', '>= 6'
-gem 'sqlite3', '~> 1.4'
+gem 'pg', '>= 0.18', '< 2.0'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do

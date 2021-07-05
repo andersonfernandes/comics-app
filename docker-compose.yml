@@ -1,11 +1,19 @@
 version: '3.7'
 
 services:
+  postgres:
+    image: postgres:11
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - postgres:/var/lib/postgresql/data
   web:
     build:
       context: .
     env_file:
       - .env
+    depends_on:
+      - postgres
     entrypoint: ./entrypoint.sh
     ports:
       - "3000:3000"
@@ -17,3 +25,4 @@ services:
 volumes:
     gems:
     rails_cache:
+    postgres:
