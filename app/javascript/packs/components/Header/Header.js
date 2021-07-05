@@ -7,7 +7,7 @@ const Root = styled.header`
   width: 100%;
   height: 150px;
   text-align: center;
-  background-color: rgba(240, 19, 30, 0.9);
+  background-color: rgba(289, 11, 5, 0.9);
   position: fixed;
   top: 0;
   padding-top: 20px;
@@ -35,12 +35,27 @@ const SearchBar = styled.input`
   }
 `
 
-const Header = () => (
-  <Root>
-    <Logo src={MarvelLogo} alt="Marvel Logo" />
+const Header = ({ handleSearch }) => {
+  const [value, setValue] = React.useState("");
 
-    <SearchBar placeholder="Search your favorite marvel comic" />
-  </Root>
-)
+  const handleKeyPress = event => {
+    if (event.charCode === 13) {
+      handleSearch(value)
+    }
+  }
+
+  return (
+    <Root>
+      <Logo src={MarvelLogo} alt="Marvel Logo" />
+
+      <SearchBar
+        placeholder="Search your favorite marvel comic"
+        onKeyPress={event => handleKeyPress(event) }
+        onChange={event => setValue(event.target.value)}
+        value={value}
+      />
+    </Root>
+  )
+}
 
 export default Header

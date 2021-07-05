@@ -48,7 +48,7 @@ const ComicsList = ({ comics }) => (
     { comics.map(comic => {
       return (
         <ComicItem key={comic.id}>
-          <img src={comic.thumbnail} />
+          <img src={comic.cover_url} />
 
           <ComicOverlay className="overlay">
             <FavoriteIcon />
